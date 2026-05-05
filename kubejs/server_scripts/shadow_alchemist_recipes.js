@@ -1,6 +1,6 @@
 ServerEvents.recipes(event => {
 
-  // Флакон Теней — без зелья воды, просто осколки + стекло
+  // Флакон Теней 
   event.shaped(
     Item.of('shadow_alchemist:shadow_flask', 2),
     [
