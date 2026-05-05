@@ -1,11 +1,6 @@
-// ============================================================
-//  SHADOW ALCHEMIST — Client Script
-//  Динамические тултипы для Амулета (показывает заряды)
-// ============================================================
-
 ItemEvents.tooltip(event => {
 
-  // Динамический тултип для Амулета — показывает текущие заряды
+  // Не реализованная механика 
   event.addAdvanced('shadow_alchemist:shadow_amulet', (item, advanced, text) => {
     const nbt = item.nbt
     const charges = nbt ? (nbt.charges || 0) : 0
@@ -19,8 +14,6 @@ ItemEvents.tooltip(event => {
       text.add(Text.of(`§8Нужно ещё ${5 - charges} Осколков Тьмы`))
     }
   })
-
-  // Тултип для Печати — показывает прочность как "заряды"
   event.addAdvanced('shadow_alchemist:alchemist_seal', (item, advanced, text) => {
     const durability = item.maxDamage - item.damage
     text.add(Text.of(`§6Прочность: §f${durability}§8/§f${item.maxDamage}`))
